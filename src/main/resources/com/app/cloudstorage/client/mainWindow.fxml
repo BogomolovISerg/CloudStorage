@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<?import javafx.scene.layout.Pane?>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.app.cloudstorage.client.MainWindowController"
+      prefHeight="400.0" prefWidth="600.0">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="10.0"/>
+    </padding>
+    <HBox>
+        <VBox>
+    <Label text="Логин"/>
+    <TextField fx:id="loginTextField" text="serg" />
+        </VBox>
+            <VBox>
+                <Pane>
+    <Label text="Пароль" layoutX="5.0"/>
+
+    <PasswordField fx:id="passwordField" text="123" layoutX="5.0" layoutY="17.0"/>
+                </Pane>
+            </VBox>
+
+<Pane>
+        <Button fx:id="loginButton" text="Login" onAction="#loginButtonPress" layoutX="5.0" layoutY="17.0"/>
+        </Pane>
+    </HBox>
+     <Label text="Remote"/>
+    <ListView fx:id="remoteFolderListView"/>
+    <HBox>
+    <Button fx:id="fetchButton" text="Получить" onAction="#fetchButtonPress"/>
+    <Button fx:id="deleteButton" text="Удалить" onAction="#deleteButtonPress"/>
+    </HBox>
+    <Label text="Local"/>
+    <ListView fx:id="localFolderListView"/>
+    <Button fx:id="storeButton" text="Отправить" onAction="#storeButtonPress"/>
+</VBox>

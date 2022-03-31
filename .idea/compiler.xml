@@ -9,5 +9,8 @@
         <module name="CloudStorage" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="CloudStorage" target="17" />
+    </bytecodeTargetLevel>
   </component>
 </project>
